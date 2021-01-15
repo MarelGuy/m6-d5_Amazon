@@ -8,7 +8,8 @@ const ProdcutSchema = new Schema(
         brand: String,
         imageUrl: String,
         price: Number,
-        category: String
+        category: String,
+        reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "reviews" }]
     },
     {
         timestamps: true,
