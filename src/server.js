@@ -14,7 +14,8 @@ const {
 
 const port = process.env.PORT
 
-
+const productsRouter = require("./services/products")
+const reviewsRouter = require("./services/reviews")
 
 app.use(cors());
 const staticFolderPath = join(__dirname, "../public")
@@ -23,7 +24,8 @@ app.use(express.json());
 
 // 
 
-
+app.use("/products", productsRouter)
+app.use("/reviews", reviewsRouter)
 
 //
 
